@@ -205,7 +205,7 @@ abu clerk account 25000
 ```
 
 <!-- ----------------------------------------------------- -->
-# expr Command
+# Expr Command
 
 expr substr _<input_string>_ _<start_index>_ _<length>_
 
