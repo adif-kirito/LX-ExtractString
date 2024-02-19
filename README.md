@@ -19,50 +19,88 @@ user@ubuntu:~$ cat state.txt
 Selangor
 Johor
 Melaka
-Negeri Sembilan
 Kuala Lumpur
-Perak
 Sabah
-Serawak
 ```
-
 
 ### 1. Bytes (-b)
 
-List 
+List with ranges:
 ```bash
-user@ubuntu:~$ cut -b 1-3 <<< '123Selangor789'
-123
+user@ubuntu:~$ cut -b 1-3 state.txt
+Sel
+Joh
+Mel
+Kua
+Sab
 ```
 
-### 2. Install Docker compose
-
-```
-sudo apt-get install docker-compose
-```
-
-![Alt text](https://github.com/adif-kirito/Docker-Assignment/blob/main/img/Capture.PNG)
-
-## 3. Clone repo
-
-```
-git clone https://github.com/adif-kirito/Docker-Assignment.git
+List without ranges:
+```bash
+user@ubuntu:~$ cut -b 1,2,3 state.txt
+Sel
+Joh
+Mel
+Kua
+Sab
 ```
 
-## 4. Build docker compose
-
-```
-docker-compose build
-```
-
-## 5. Up docker compose
-
-```
-docker-compose up
+Show from selected bytes to end byte of a line:
+```bash
+user@ubuntu:~$ cut -b 3- state.txt
+langor
+hor
+laka
+ala Lumpur
+bah
 ```
 
-## 6. Verify
+<!-- ----------------------------------------------------- -->
+### 2. Column (-c)
 
-Go to browser, enter http://*Host IP*/
+Extract specific characters:
+```bash
+user@ubuntu:~$ cut -c 1,3,5 state.txt
+Sln
+Jhr
+Mlk
+Kaa
+Sbh
+```
 
-![Alt text](https://github.com/adif-kirito/Docker-Assignment/blob/main/img/Capture.PNG)
+Extract first 3 characters:
+```bash
+user@ubuntu:~$ cut -c 1-3 state.txt
+Sel
+Joh
+Mel
+Kua
+Sab
+```
+
+Show from selected character to end character of a line:
+```bash
+user@ubuntu:~$ cut -c 3- state.txt
+langor
+hor
+laka
+ala Lumpur
+bah
+```
+
+<!-- ----------------------------------------------------- -->
+# awk Command
+### 3. Field (-f)
+
+Extract specific characters:
+```bash
+user@ubuntu:~$ cut -d " " -f 1 state.txt
+Selangor
+Johor
+Melaka
+Kuala
+Sabah
+```
+
+<!-- ----------------------------------------------------- -->
+# expr Command
