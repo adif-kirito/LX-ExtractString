@@ -1,7 +1,4 @@
-# LX-ExtractString
-
-<!-- ----------------------------------------------------- -->
-## Cut Command
+# Cut Command
 
 ### Flags
 
