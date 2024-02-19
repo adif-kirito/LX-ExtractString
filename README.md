@@ -1,6 +1,6 @@
 # Cut Command
 
-### Flags
+## Flags
 
 |     Option    |                                     Description                                     |
 |:-------------:|:-----------------------------------------------------------------------------------:|
@@ -12,7 +12,7 @@
 | `-complement` | Invert the selection of fields/characters. Print the fields/characters not selected |
 <br>
 
-### Example
+## Example
 
 ```bash
 user@ubuntu:~$ cat state.txt
